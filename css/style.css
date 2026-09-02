@@ -31,21 +31,17 @@ p {
 }
 
 .demo {
-  width: min(100%, 340px);
+  width: min(100%, 260px);
   margin-bottom: 36px;
-  padding: 10px;
-  border: 1px solid rgba(248, 231, 255, 0.2);
-  border-radius: 30px;
-  background: rgba(248, 231, 255, 0.07);
-  box-shadow: 0 20px 55px rgba(0, 0, 0, 0.35);
 }
 
 .demo video {
   display: block;
   width: 100%;
-  max-height: 70vh;
-  border-radius: 22px;
-  background: #0d0916;
+  aspect-ratio: 3 / 5;
+  background: #171126;
+  object-fit: cover;
+  object-position: center 56%;
 }
 
 a {
