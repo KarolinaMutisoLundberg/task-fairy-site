@@ -33,15 +33,19 @@ p {
 .demo {
   width: min(100%, 260px);
   margin-bottom: 36px;
+  background: #171126;
 }
 
 .demo video {
   display: block;
   width: 100%;
   aspect-ratio: 3 / 5;
-  background: #171126;
+  border: 0;
+  outline: 0;
+  background: transparent;
   object-fit: cover;
-  object-position: center 56%;
+  object-position: center 62%;
+  mix-blend-mode: lighten;
 }
 
 a {

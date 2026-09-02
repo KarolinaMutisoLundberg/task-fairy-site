@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=4">
   <title>Task Fairy</title>
 </head>
 <body>
@@ -17,7 +17,7 @@
     <p>A tiny magical productivity app.</p>
 
     <section class="demo" aria-label="Task Fairy app demonstration">
-      <video autoplay muted loop playsinline preload="metadata">
+      <video id="task-fairy-demo" autoplay muted loop playsinline preload="auto">
         <source src="assets/task-fairy-demo.mp4" type="video/mp4">
         Your browser does not support embedded video.
       </video>
@@ -26,6 +26,15 @@
     <a href="privacy.html">Privacy Policy</a>
 
   </main>
+
+  <script>
+    const demoVideo = document.getElementById("task-fairy-demo");
+
+    demoVideo.muted = true;
+    demoVideo.play().catch(() => {
+      demoVideo.addEventListener("canplay", () => demoVideo.play(), { once: true });
+    });
+  </script>
 
 </body>
 </html>
